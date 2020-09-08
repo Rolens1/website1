@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #f7f6ff;
+}
+
+.h2num1 {
+    margin: 16px;
+}
+
+.container1 {
+    margin-top: 25px;
+    padding: 32px;
+}
+
+.select-box{
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+
+
+.select-box .option-container{
+    background: #9cb2bb;
+    margin: 10 px 100px 10px;
+    padding: 32 px;
+    width: 100%;
+    max-height: 0;
+     opacity:0;
+    transition: all 0.5s;
+    overflow: hidden;
+    color: #f7f6ff;
+    border: solid;
+    border-width: thick;
+    border-color: #455657;
+    border-radius: 8px;
+
+    order: 1;
+   
+}
+
+
+
+.select-box .option,
+.selected { 
+    padding: 12px 10px;
+    cursor: pointer;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.selected {
+    background: #9cb2bb;
+    color: #f7f6ff;
+    position: relative;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: solid;
+    border-width: thick;
+    border-color: #455657;
+
+    order: 0;
+}
+
+.selected::after {
+    content: "";
+    background: url("Rocket Elevator Assets/DownArrowSelector.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+}
+.select-box .option:hover {
+    background: #7edabb;
+}
+
+.select-box .option .radio {
+    display: none;
+}
+
+.select-box .option-container.active1 {
+    max-height: 140px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .option-container.active1 + .selected::after {
+    transform: rotateX(180deg);
+    top: -6px;
+}
+
+.select-box .option-container::-webkit-scrollbar {
+    width: 8px;
+    background: #7c9199;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .option-container::-webkit-scrollbar-thumb {
+    background: #3e4e55;
+}
+
+
+.select-box1 .option-container1{
+    background: #9cb2bb;
+    margin: 15 px 100 px 10 px;
+    padding: 32 px;
+    width: 40%;
+    max-height: 300px;
+     /*opacity:0; */
+    transition: all 0.5s;
+    overflow: hidden;
+    color: #f7f6ff;
+    border: solid;
+    border-width: thick;
+    border-color: #455657;
+    border-radius: 8px;
+
+    order: 1;
+   
+}
+
+.select-box1 .option-container1.active1 {
+    max-height: 300px;
+    width: 300px;
+    opacity: 1;
+    overflow-y: scroll;
+}

@@ -30,6 +30,8 @@
     <!-- PAGE LEVEL SCRIPTS -->
     <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+    <link rel="stylesheet" href="requestquotecss.css">
+
 </head>
 <!--
 		AVAILABLE BODY CLASSES:
@@ -52,79 +54,139 @@
 		BACKGROUND IMAGE [together with .boxed class]
 		data-background="assets/images/_smarty/boxed_background/1.jpg" -->
 
-<body class="smoothscroll enable-animation">
+<body class="smoothscroll enable-animation grain-blue">
     <!--Creating a selector-->
     <div class="container">
-        <h2>Building Type</h2>
 
-        <div class="selected">
-            Select your building type :
-        </div>
+        <h2 class="h2num1">Request a Quote</h2>
+        <div class="select-box">
 
-        <div class="container">
-            <h2>Building Category</h2>
+            <!-- OResidential-->
+            <div class="option-container">
 
-            <div class="selected">
-                Select Building Category
-            </div>
-            <div class="select-box">
-                <!-- OResidential-->
-                <div class="option-container">
-                    <div class="option">
-                        <input 
-                        type="radio" 
-                        name="Category" 
-                        id="residential" 
-                        class="radio"
-                        >
+                <div class="option">
+                    <input type="radio" name="Category" id="residential" class="radio">
 
-                        <label for="residential">Residential</label>
-                    </div>
+                    <label for="residential">Residential</label>
                 </div>
+
                 <!--Commercial-->
-                <div class="option-container">
-                    <div class="option">
-                        <input 
-                        type="radio" 
-                        name="Category" 
-                        id="commercial" 
-                        class="radio"
-                        >
 
-                        <label for="residential">Commercial</label>
-                    </div>
+                <div class="option">
+                    <input type="radio" name="Category" id="commercial" class="radio">
+
+                    <label for="residential">Commercial</label>
                 </div>
+
                 <!--Corporate-->
-                <div class="option-container">
-                    <div class="option">
-                        <input 
-                        type="radio" 
-                        name="Category" 
-                        id="corporate" 
-                        class="radio"
-                        >
 
-                        <label for="residential">Corporate</label>
-                    </div>
+                <div class="option">
+                    <input type="radio" name="Category" id="corporate" class="radio">
+
+                    <label for="residential">Corporate</label>
                 </div>
-                <!--Hybrid-->
-                <div class="option-container">
-                    <div class="option">
-                        <input 
-                        type="radio" 
-                        name="Category" 
-                        id="hybrid" 
-                        class="radio"
-                        >
 
-                        <label for="residential">Hybrid</label>
-                    </div>
+                <!--Hybrid-->
+
+                <div class="option">
+                    <input type="radio" name="Category" id="hybrid" class="radio">
+
+                    <label for="residential">Hybrid</label>
                 </div>
             </div>
+            <div class="selected">
+                Select your building type :
+            </div>
         </div>
-
     </div>
 
+    <!--Selector for Building type-->
+    <div class="container1 forResidential">
+
+        <h2 class="h2num1">Some Numbers</h2>
+        <div class="select-box1">
+
+            <!--Residentials-->
+            <!-- Apparts-->
+            <div class="option-container1 active1">
+
+                <div class="option1">
+                    <input type="number" name="numbOf" id="numAppart" class="numClass">
+
+                    <label for="residential">Number of Appartements</label>
+                </div>
+
+                <!--Floor-->
+
+                <div class="option1">
+                    <input type="number" name="numOf" id="numFloor" class="numClass">
+
+                    <label for="residential commercial corporate hybrid">Number of floors</label>
+                </div>
+
+                <!--Basement-->
+
+                <div class="option1">
+                    <input type="number" name="numOf" id="numBasement" class="numClass">
+
+                    <label for="residential commercial corporate hybrid">Number of Basement</label>
+                </div>
+
+                <!--Try to get everything on this list and seperate it in JS depending on category-->
+                <!--Number of businesses-->
+                <div class="option1">
+                    <input type="number" name="numOf" id="numBiz" class="numClass">
+
+                    <label for="commercial hybrid">Number of Distinct Businesses</label>
+                </div>
+
+                <!--Number of parking-->
+                <div class="option1">
+                    <input type="number" name="numOf" id="numParking" class="numClass">
+
+                    <label for="commercial corporate hybrid">Number of parking</label>
+                </div>
+
+                <!--Number of elevator cage to be deployed-->
+                <div class="option1">
+                    <input type="number" name="numOf" id="numCage" class="numClass">
+
+                    <label for="commercial">Number of elevator cage to be deployed</label>
+                </div>
+
+                <!--For corporates-->
+                <!--Seperate tenants companies-->
+                <div class="option1">
+                    <input type="number" name="numOf" id="numTenants" class="numClass">
+
+                    <label for="corporate">Number of seperate tenant companies</label>
+                </div>
+
+                <!--Maximum number of occupents per floor-->
+                <div class="option1">
+                    <input type="number" name="numOf" id="numOccupants" class="numClass">
+
+                    <label for="corporate hybrid">Maximum number of occupants per floor</label>
+                </div>
+
+                <!--for hybrids-->
+                <!--Number of 24h activities-->
+                <div class="option1">
+                    <input type="number" name="numOf" id="numActivity" class="numClass">
+
+                    <label for="hybrid">Number of hours of activities of the building</label>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="selected1">
+                Just some numbers :
+            </div>
+        </div>
+    </div>
     <!--wrapper-->
     <di id="wrapper">
 
@@ -161,14 +223,7 @@
                                         HOME
                                     </a>
                                 </li>
-                                <li>
-                                    <!-- CONTACT -->
-                                    <a href="#contact">
-                                        CONTACT
-                                    </a>
-                                </li>
                             </ul>
-
                         </nav>
                     </div>
 
@@ -179,7 +234,7 @@
 
 
         <!-- Parallax -->
-        <section class="parallax parallax-1" style="background-image: url('demo_files/images/1200x800/34-min.jpg');">
+        <section class="parallax parallax-1" ;">
             <div class="overlay dark-5">
                 <!-- dark overlay [1 to 9 opacity] -->
             </div>
@@ -199,185 +254,7 @@
         <!-- /Parallax -->
 
     </di>
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="container">
-
-            <header class="text-center mb-60">
-                <h2>Contact Us</h2>
-                <p class="lead font-lato">Customer Satisfaction Garanteed</p>
-                <hr />
-            </header>
-
-
-            <div class="row">
-
-                <!-- FORM -->
-                <div class="col-md-8 col-sm-8">
-
-                    <h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
-
-
-                    <!--
-								MESSAGES
-								
-									How it works?
-									The form data is posted to php/contact.php where the fields are verified!
-									php.contact.php will redirect back here and will add a hash to the end of the URL:
-										#alert_success 		= email sent
-										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
-										#alert_mandatory	= email not sent - required fields empty
-										Hashes are handled by assets/js/contact.js
-
-									Form data: required to be an array. Example:
-										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
-										Also, add `required` to input fields if is a mandatory field. 
-										Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
-
-									PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
-												 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
-
-									WARNING! Do not change the `email` and `name`!
-												contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-												contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-							-->
-
-                    <!-- Alert Success -->
-                    <div id="alert_success" class="alert alert-success mb-30">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <strong>Thank You!</strong> Your message successfully sent!
-                    </div><!-- /Alert Success -->
-
-
-                    <!-- Alert Failed -->
-                    <div id="alert_failed" class="alert alert-danger mb-30">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <strong>[SMTP] Error!</strong> Internal server error!
-                    </div><!-- /Alert Failed -->
-
-
-                    <!-- Alert Mandatory -->
-                    <div id="alert_mandatory" class="alert alert-danger mb-30">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
-                    </div><!-- /Alert Mandatory -->
-
-
-                    <form action="php/contact.php" method="post" enctype="multipart/form-data">
-                        <fieldset>
-                            <input type="hidden" name="action" value="contact_send" />
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label for="contact:name">Full Name *</label>
-                                    <input required type="text" value="" class="form-control"
-                                        name="contact[name][required]" id="contact:name">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="contact:email">E-mail Address *</label>
-                                    <input required type="email" value="" class="form-control"
-                                        name="contact[email][required]" id="contact:email">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="contact:phone">Phone</label>
-                                    <input type="text" value="" class="form-control" name="contact[phone]"
-                                        id="contact:phone">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <label for="contact:subject">Subject *</label>
-                                    <input required type="text" value="" class="form-control"
-                                        name="contact[subject][required]" id="contact:subject">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="contact_department">Department</label>
-                                    <select class="form-control pointer" name="contact[department]">
-                                        <option value="">--- Select ---</option>
-                                        <option value="Marketing">Marketing</option>
-                                        <option value="Webdesign">Webdesign</option>
-                                        <option value="Architecture">Architecture</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="contact:message">Message *</label>
-                                    <textarea required maxlength="10000" rows="8" class="form-control"
-                                        name="contact[message]" id="contact:message"></textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="contact:attachment">File Attachment</label>
-
-                                    <!-- custom file upload -->
-                                    <input class="custom-file-upload" type="file" id="file" name="contact[attachment]"
-                                        id="contact:attachment" data-btn-text="Select a File" />
-                                    <small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
-
-                                </div>
-                            </div>
-
-                        </fieldset>
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND
-                                    MESSAGE</button>
-                            </div>
-                        </div>
-                    </form>
-
-                </div>
-                <!-- /FORM -->
-
-
-                <!-- INFO -->
-                <div class="col-md-4 col-sm-4">
-
-                    <h2>Visit Us</h2>
-
-                    <!-- 
-							Available heights
-								h-100
-								h-150
-								h-200
-								h-250
-								h-300
-								h-350
-								h-400
-								h-450
-								h-500
-								h-550
-								h-600
-							-->
-                    <div id="map2" class="h-400"></div>
-
-                    <hr />
-
-                    <p>
-                        <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong>418-725 Boulevard
-                            Lebourgneuf, Québec, QC G2J 0C4, Canada</span>
-                        <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a
-                                href="tel:581-701-0303">(581) 701-0303</a></span>
-                        <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a
-                                href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
-                    </p>
-
-                </div>
-                <!-- /INFO -->
-
-            </div>
-
-        </div>
-    </section>
-    <!-- /CONTACT -->
-
-
-
-
+    
     <!-- FOOTER -->
     <footer id="footer">
         <div class="container">
@@ -472,6 +349,7 @@
 
     <!-- PAGELEVEL SCRIPTS -->
     <script src="assets/js/contact.js"></script>
+    <script src="requestquotejava.js"></script>
 
 
 
