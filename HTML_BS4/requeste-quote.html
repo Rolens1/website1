@@ -55,143 +55,9 @@
 		data-background="assets/images/_smarty/boxed_background/1.jpg" -->
 
 <body class="smoothscroll enable-animation grain-blue">
-    <!--Creating a selector-->
-    <div class="container">
-
-        <h2 class="h2num1">Request a Quote</h2>
-        <div class="select-box">
-
-            <!-- OResidential-->
-            <div class="option-container">
-
-                <div class="option">
-                    <input type="radio" name="Category" id="residential" class="radio">
-
-                    <label for="residential">Residential</label>
-                </div>
-
-                <!--Commercial-->
-
-                <div class="option">
-                    <input type="radio" name="Category" id="commercial" class="radio">
-
-                    <label for="residential">Commercial</label>
-                </div>
-
-                <!--Corporate-->
-
-                <div class="option">
-                    <input type="radio" name="Category" id="corporate" class="radio">
-
-                    <label for="residential">Corporate</label>
-                </div>
-
-                <!--Hybrid-->
-
-                <div class="option">
-                    <input type="radio" name="Category" id="hybrid" class="radio">
-
-                    <label for="residential">Hybrid</label>
-                </div>
-            </div>
-            <div class="selected">
-                Select your building type :
-            </div>
-        </div>
-    </div>
-
-    <!--Selector for Building type-->
-    <div class="container1 forResidential">
-
-        <h2 class="h2num1">Some Numbers</h2>
-        <div class="select-box1">
-
-            <!--Residentials-->
-            <!-- Apparts-->
-            <div class="option-container1 active1">
-
-                <div class="option1">
-                    <input type="number" name="numbOf" id="numAppart" class="numClass">
-
-                    <label for="residential">Number of Appartements</label>
-                </div>
-
-                <!--Floor-->
-
-                <div class="option1">
-                    <input type="number" name="numOf" id="numFloor" class="numClass">
-
-                    <label for="residential commercial corporate hybrid">Number of floors</label>
-                </div>
-
-                <!--Basement-->
-
-                <div class="option1">
-                    <input type="number" name="numOf" id="numBasement" class="numClass">
-
-                    <label for="residential commercial corporate hybrid">Number of Basement</label>
-                </div>
-
-                <!--Try to get everything on this list and seperate it in JS depending on category-->
-                <!--Number of businesses-->
-                <div class="option1">
-                    <input type="number" name="numOf" id="numBiz" class="numClass">
-
-                    <label for="commercial hybrid">Number of Distinct Businesses</label>
-                </div>
-
-                <!--Number of parking-->
-                <div class="option1">
-                    <input type="number" name="numOf" id="numParking" class="numClass">
-
-                    <label for="commercial corporate hybrid">Number of parking</label>
-                </div>
-
-                <!--Number of elevator cage to be deployed-->
-                <div class="option1">
-                    <input type="number" name="numOf" id="numCage" class="numClass">
-
-                    <label for="commercial">Number of elevator cage to be deployed</label>
-                </div>
-
-                <!--For corporates-->
-                <!--Seperate tenants companies-->
-                <div class="option1">
-                    <input type="number" name="numOf" id="numTenants" class="numClass">
-
-                    <label for="corporate">Number of seperate tenant companies</label>
-                </div>
-
-                <!--Maximum number of occupents per floor-->
-                <div class="option1">
-                    <input type="number" name="numOf" id="numOccupants" class="numClass">
-
-                    <label for="corporate hybrid">Maximum number of occupants per floor</label>
-                </div>
-
-                <!--for hybrids-->
-                <!--Number of 24h activities-->
-                <div class="option1">
-                    <input type="number" name="numOf" id="numActivity" class="numClass">
-
-                    <label for="hybrid">Number of hours of activities of the building</label>
-                </div>
-
-
-
-
-
-            </div>
-            <div class="selected1">
-                Just some numbers :
-            </div>
-        </div>
-    </div>
-    <!--wrapper-->
-    <di id="wrapper">
-
-        <!--Header-->
-        <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+  
+          <!--Header-->
+          <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
             <!-- TOP NAV -->
             <header id="topNav">
@@ -207,6 +73,12 @@
                         <img src="rocket elevator assets/r2.png" alt="" />
                     </a>
 
+                    <!-- 
+                        Top Nav 
+                        
+                        AVAILABLE CLASSES:
+                        submenu-dark = dark sub menu
+                    -->
                     <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
                         <nav class="nav-main">
 
@@ -217,19 +89,175 @@
                                 Add .external for an external link!
                             -->
                             <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-                                <li class="active">
-                                    <!-- HOME -->
+                                <li class="active"><!-- HOME -->
                                     <a href="#">
                                         HOME
                                     </a>
                                 </li>
                             </ul>
+
                         </nav>
                     </div>
 
                 </div>
             </header>
+            <!-- /Top Nav -->
+
         </div>
+  
+  
+  
+  
+    <!--Creating a selector-->
+    <div class="container">
+        
+        <h2 class="h2num1">Request a Quote</h2>
+        <option type="number" class="button-quote" data-buttonqID="resi">Residential</option>
+        <option type="number" class="button-quote" data-buttonqID="comm">Commercial</option>
+        <option type="number" class="button-quote" data-buttonqID="corp">Corporate</option>
+        <option type="number" class="button-quote" data-buttonqID="hybr">Hybrid</option>
+    </div>
+
+    <!--Selector for Building type-->
+    <div id="categories">
+        <!--Number of appartments-->
+        <div class="resi"> 
+
+            <div class="numbers resi">
+                <input type="number" id="floorsNum">
+                <label>Number of floors</label>
+            </div>
+
+            <div class="numbers resi">
+                <input type="number" id="appartNum">
+                <label>Number of appartements</label>
+            </div>
+
+            <!--Number of basements-->
+            <div  class="numbers resi">
+                <input type="number" id="basementNum">
+             <label>Number of basements</label>
+            </div>
+
+        </div>
+        
+
+
+
+        <div class="corp">
+            <!--Number of basements-->
+            <div  class="numbers corp">
+                <input type="text" id="basement1Num">
+             <label>Number of basements</label>
+            </div>
+
+    <!--Number of parking-->
+            <div  class="numbers corp">
+                <input type="text" id="parking1Num">
+                <label>Number of Parking</label>
+            </div>
+
+        <!--Seperate tenant companies-->
+            <div  class="numbers corp">
+                <input type="text" id="tenants1Num">
+                <label>Number of tenant companies</label>
+            </div>
+
+                        <!--Number of floors-->
+            <div class="numbers corp">
+                <input type="text" id="floors1Num">
+                <label>Number of floors</label>
+            </div>
+        <!--Maximum occupant per floor-->
+            <div  class="numbers corp">
+                <input type="text" id="maxPerFloor1">
+                <label>Maximum number of occupants per floor</label>
+            </div>
+        </div>
+        
+    
+        <div class="comm">
+        <!--Number of distinct business-->
+            <div  class="numbers comm">
+                <input type="text" id="business2Num">
+                <label>Number of distinct businesses</label>
+            </div>
+        <!--Number of elevator cage to be deployed-->
+            <div class="numbers comm">
+                <input type="text" id="elevator2Num">
+                <label>Number of elevator cages</label>
+            </div>
+                        <!--Number of basements-->
+            <div  class="numbers comm">
+                <input type="text" id="basement2Num">
+             <label>Number of basements</label>
+            </div>
+            <!--Number of parking-->
+            <div  class="numbers comm">
+                <input type="text" id="parking2Num">
+                <label>Number of Parking</label>
+            </div>
+            <!--floors-->
+            <div class="numbers comm">
+                <input type="text" id="floors2Num">
+                <label>Number of floors</label>
+            </div>
+
+        </div>
+
+        <div class="hybr">
+            <!--Number of basements-->
+            <div  class="numbers hybr">
+                <input type="text" id="basement3Num">
+             <label>Number of basements</label>
+            </div>
+
+            <!--Number of parking-->
+            <div  class="numbers hybr">
+                <input type="text" id="parking3Num">
+                <label>Number of Parking</label>
+            </div>
+
+                 <!--Number of distinct business-->
+            <div  class="numbers hybr">
+                <input type="text" id="business3Num">
+                <label>Number of distinct businesses</label>
+            </div>
+
+                        <!--Number of floors-->
+            <div class="numbers hybr">
+                <input type="text" id="floors3Num">
+                <label>Number of floors</label>
+            </div>
+            <!--Maximum occupant per floor-->
+            <div  class="numbers hybr">
+                <input type="text" id="maxPerFloor3">
+                <label>Maximum number of occupants per floor</label>
+            </div>
+
+            <!--Hours of activities-->
+           <div  class="numbers hybr">
+                <input type="text" id="hourofactivities3">
+                <label>Number of hours of activity</label>
+            </div>
+            
+        </div>
+
+
+
+   
+    
+        <div id="result">
+            <label >Hey</label>
+        </div>
+
+ 
+    </div>
+
+    <!--Calculate-->
+    <button class="calculate">Get quote</button>
+    <!--wrapper-->
+    <di id="wrapper">
 
 
 
@@ -350,7 +378,6 @@
     <!-- PAGELEVEL SCRIPTS -->
     <script src="assets/js/contact.js"></script>
     <script src="requestquotejava.js"></script>
-
 
 
 </body>
