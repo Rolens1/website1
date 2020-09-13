@@ -40,6 +40,7 @@
 	window.width 	= jQuery(window).width();
 	window.height 	= jQuery(window).height();
 
+
 	/* Init */
 	jQuery(window).ready(function () {
 

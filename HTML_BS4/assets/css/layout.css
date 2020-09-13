@@ -272,7 +272,7 @@ section header.section-header {
 		padding:15px 0;
 	}
 	section.section-xs {
-		padding:200px 0;
+		padding:30px 0;
 	}
 	section.section-sm {
 		padding:60px 0;
@@ -2892,7 +2892,6 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 	#header.fixed {
 		position:fixed;
 		border-bottom:rgba(0,0,0,0.08) 1px solid;
-		top: 0;
 	}
 	#header.fixed #topNav a.logo {
 		height:60px;

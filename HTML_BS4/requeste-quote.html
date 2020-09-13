@@ -30,7 +30,10 @@
     <!-- PAGE LEVEL SCRIPTS -->
     <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+    
     <link rel="stylesheet" href="requestquotecss.css">
+    <script src="requestquote2.js"></script>
+    <link href="buttonscss.css" rel="stylesheet">
 
 </head>
 <!--
@@ -54,7 +57,7 @@
 		BACKGROUND IMAGE [together with .boxed class]
 		data-background="assets/images/_smarty/boxed_background/1.jpg" -->
 
-<body class="smoothscroll enable-animation grain-blue">
+<body class="enable-animation pattern8">
   
           <!--Header-->
           <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
@@ -90,7 +93,7 @@
                             -->
                             <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
                                 <li class="active"><!-- HOME -->
-                                    <a href="#">
+                                    <a href="index-onepage-construction.html">
                                         HOME
                                     </a>
                                 </li>
@@ -111,175 +114,366 @@
     <!--Creating a selector-->
     <div class="container">
         
-        <h2 class="h2num1">Request a Quote</h2>
-        <option type="number" class="button-quote" data-buttonqID="resi">Residential</option>
-        <option type="number" class="button-quote" data-buttonqID="comm">Commercial</option>
-        <option type="number" class="button-quote" data-buttonqID="corp">Corporate</option>
-        <option type="number" class="button-quote" data-buttonqID="hybr">Hybrid</option>
+        <div class="heading-title heading-dotted text-center">
+            <h2 style="background-color: transparent;">Request a Quote</h2>
+        </div>
+        <div class="row">
+            <div class="textwrapper">
+                <svg height="40" width="200">
+                <rect id="shape" height="40" width="200" />
+                <div id="text">
+            <button class="button-quote" data-buttonqID="resi">Residential</button>
+            </div>
+                </svg>
+            </div>
+            <div class="textwrapper">
+                <svg height="40" width="200">
+                <rect id="shape" height="40" width="200" />
+                <div id="text">
+                    <button type="number" class="button-quote" data-buttonqID="comm">Commercial</button>
+            </div>
+                </svg>
+            </div>
+            <div class="textwrapper">
+                <svg height="40" width="200">
+                <rect id="shape" height="40" width="200" />
+                <div id="text">
+                    <button type="number" class="button-quote" data-buttonqID="corp">Corporate</button>
+            </div>
+                </svg>
+            </div>
+            <div class="textwrapper">
+                <svg height="40" width="200">
+                <rect id="shape" height="40" width="200" />
+                <div id="text">
+                    <button type="number" class="button-quote" data-buttonqID="hybr">Hybrid</button>
+            </div>
+                </svg>
+            </div>
+            
+            
+        </div>
     </div>
+    
 
     <!--Selector for Building type-->
-    <div id="categories">
+    <div id="categories" class="center" >
         <!--Number of appartments-->
-        <div class="resi"> 
+        <div class="resi row center"> 
 
-            <div class="numbers resi">
-                <input type="number" id="floorsNum">
-                <label>Number of floors</label>
+                
+            <div class="numbers resi redcol">
+                <input class="enter_Text" type="number" id="floorsNum" placeholder="Number of Floors">
+                <label class="enter_Text_Label">Floors</label>
+                
             </div>
 
-            <div class="numbers resi">
-                <input type="number" id="appartNum">
-                <label>Number of appartements</label>
+            <div class="numbers resi bluecol">
+                <input class="enter_Text" type="number" id="appartNum" placeholder="Number of Apparts">
+                <label class="enter_Text_Label">Appartements</label>
             </div>
 
             <!--Number of basements-->
-            <div  class="numbers resi">
-                <input type="number" id="basementNum">
-             <label>Number of basements</label>
+            <div  class="numbers resi redcol">
+                <input class="enter_Text" type="number" id="basementNum" placeholder="Number of Basements">
+             <label class="enter_Text_Label">Basements</label>
             </div>
+
+    
+        </div>
+        <div class="resi row center">
+            <div id="elevatortype1" class="container numbers resi bluecol">
+                <label>Elevator type</label>
+                <div class="resi">
+                    <input id="resi-elevatortype1" name="grp7" type="radio" value="7565">Standard</button>
+                </div>
+                <div class="resi">
+                    <input  id="resi-elevatortype2" name="grp7" type="radio" value="12345">Premium</button>
+                </div>
+                <div class="resi">
+                    <input  id="resi-elevatortype3" name="grp7" type="radio" value="15400">Excelium</button>
+                </div>
+            </div>
+
+            <div class="container numbers resi redcol">
+                <label>Instalation</label>
+                <div class="resi">
+                    <input id="resi-installation1" name="grp8" type="radio" value="(10/100)">Standard</button>
+                </div>
+                <div class="resi">
+                    <input id="resi-installation2" name="grp8" type="radio" value="(13/100)">Premium</button>
+                </div>
+                <div class="resi">
+                    <input id="resi-installation3" name="grp8" type="radio" value="(16/100)">Excelium</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="AnswersToLoad resi row center numbers">
+            <table>
+                <p id="resi-price1">Prices</p>
+                <p id="resi-totalelevator1">Total Elevators</p>
+                <p id="resi-totalfloor1">Floor</p>
+            </table>
 
         </div>
-        
 
 
 
-        <div class="corp">
+        <div class="corp row center">
             <!--Number of basements-->
-            <div  class="numbers corp">
-                <input type="text" id="basement1Num">
-             <label>Number of basements</label>
+            <div  class="numbers corp redcol">
+                <input class="enter_Text" type="number" id="basement1Num" placeholder="Number of Basements">
+             <label class="enter_Text_Label">Basements</label>
             </div>
 
     <!--Number of parking-->
-            <div  class="numbers corp">
-                <input type="text" id="parking1Num">
-                <label>Number of Parking</label>
+            <div  class="numbers corp bluecol">
+                <input class="enter_Text" type="number" id="parking1Num" placeholder="Number of Parkings">
+                <label class="enter_Text_Label">Parking</label>
             </div>
 
         <!--Seperate tenant companies-->
-            <div  class="numbers corp">
-                <input type="text" id="tenants1Num">
-                <label>Number of tenant companies</label>
+            <div  class="numbers corp redcol">
+                <input class="enter_Text" type="number" id="tenants1Num" placeholder="Tenants Companies">
+                <label class="enter_Text_Label">Tenant companies</label>
             </div>
 
                         <!--Number of floors-->
-            <div class="numbers corp">
-                <input type="text" id="floors1Num">
-                <label>Number of floors</label>
+            <div class="numbers corp bluecol">
+                <input class="enter_Text" type="number" id="floors1Num" placeholder="Number of Floors">
+                <label class="enter_Text_Label">Floors</label>
             </div>
         <!--Maximum occupant per floor-->
-            <div  class="numbers corp">
-                <input type="text" id="maxPerFloor1">
-                <label>Maximum number of occupants per floor</label>
+            <div  class="numbers corp redcol">
+                <input class="enter_Text" type="number" id="maxPerFloor1" placeholder="Occupants per floor">
+                <label class="enter_Text_Label">Occupants per floor</label>
             </div>
+
+
+           
+
+        </div>
+
+        <div   class="corp row center">
+
+            <div class="container numbers corp bluecol">
+                <label>Elevator type</label>
+                <div class="corp">
+                    <input id="corp-elevatortype1" name="grp5" type="radio" value="7565">Standard</button>
+                </div>
+                <div class="corp">
+                    <input id="corp-elevatortype2" name="grp5" type="radio" value="12345">Premium</button>
+                </div>
+                <div class="corp">
+                    <input id="corp-elevatortype3" name="grp5" type="radio" value="15400">Excelium</button>
+                </div>
+            </div>
+
+            <div class="container numbers corp redcol">
+                <label>Instalation</label>
+                <div class="corp">
+                    <input id="corp-installation1" name="grp6" type="radio" value="(10/100)">Standard</button>
+                </div>
+                <div class="corp">
+                    <input id="corp-installation2" name="grp6" type="radio" value="(13/100)">Premium</button>
+                </div>
+                <div class="corp">
+                    <input id="corp-installation3" name="grp6" type="radio" value="(16/100)">Excelium</button>
+                </div>
+                </div>
+        </div>
+
+
+        <div class="AnswersToLoad corp row center numbers">
+            <table>
+                <p id="corp-price1">Prices</p>
+                <p id="corp-totalelevator1">Total Elevators</p>
+                <p id="corp-totalfloor1">Floor</p>
+            </table>
         </div>
         
     
-        <div class="comm">
+        <div class="comm row center">
         <!--Number of distinct business-->
-            <div  class="numbers comm">
-                <input type="text" id="business2Num">
-                <label>Number of distinct businesses</label>
+            <div  class="numbers comm bluecol">
+                <input class="enter_Text" type="number" id="business2Num" placeholder="Distinct Businesses">
+                <label class="enter_Text_Label">Distinct businesses</label>
             </div>
         <!--Number of elevator cage to be deployed-->
-            <div class="numbers comm">
-                <input type="text" id="elevator2Num">
-                <label>Number of elevator cages</label>
+            <div class="numbers comm redcol">
+                <input class="enter_Text" type="number" id="elevator2Num" placeholder="Elevator Cages">
+                <label class="enter_Text_Label">Cages</label>
             </div>
                         <!--Number of basements-->
-            <div  class="numbers comm">
-                <input type="text" id="basement2Num">
-             <label>Number of basements</label>
+            <div  class="numbers comm bluecol">
+                <input class="enter_Text" type="number" id="basement2Num" placeholder="Number of Basements">
+             <label class="enter_Text_Label">Basements</label>
             </div>
             <!--Number of parking-->
-            <div  class="numbers comm">
-                <input type="text" id="parking2Num">
-                <label>Number of Parking</label>
+            <div  class="numbers comm redcol">
+                <input class="enter_Text" type="number" id="parking2Num" placeholder="Number of Parking">
+                <label class="enter_Text_Label">Parkings</label>
             </div>
             <!--floors-->
-            <div class="numbers comm">
-                <input type="text" id="floors2Num">
-                <label>Number of floors</label>
+            <div class="numbers comm bluecol">
+                <input class="enter_Text" type="number" id="floors2Num" placeholder="Number of floors">
+                <label class="enter_Text_Label">Floors</label>
             </div>
+
+            
+
+           
+        </div>
+
+
+        <div class="comm row center">
+            
+            <div class="container numbers comm redcol">
+                <label>Elevator type</label>
+            <div class="comm">
+                <input id="comm-elevatortype1"  name="grp1" type="radio" value="7565">Standard</button>
+            </div>
+            <div class="comm">
+                <input id="comm-elevatortype2" name="grp1" type="radio" value="12345">Premium</button>
+            </div>
+            <div class="comm">
+                <input id="comm-elevatortype3"  name="grp1" type="radio" value="15400">Excelium</button>
+            </div>
+            </div>
+
+            <div class="container numbers comm bluecol">
+                <label>Instalation</label>
+                <div class="comm">
+                    <input id="comm-installation1" name="grp2" type="radio" value="(10/100)">Standard</button>
+                </div>
+                <div class="comm">
+                    <input id="comm-installation2" name="grp2" type="radio" value="(13/100)">Premium</button>
+                </div>
+                <div class="comm">
+                    <input id="comm-installation3" name="grp2" type="radio" value="(16/100)">Excelium</button>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <div class="AnswersToLoad comm row center numbers">
+            <table>
+                <p id="comm-price1">Prices</p>
+                <p id="comm-totalelevator1">Total Elevators</p>
+                <p id="comm-totalfloor1">Floor</p>
+            </table>
 
         </div>
 
-        <div class="hybr">
+        <div class="hybr row center">
             <!--Number of basements-->
-            <div  class="numbers hybr">
-                <input type="text" id="basement3Num">
-             <label>Number of basements</label>
+            <div class="center row">
+            <div  class="numbers hybr bluecol">
+                <input class="enter_Text" type="number" id="basement3Num" placeholder="Number of Basements">
+             <label class="enter_Text_Label">Basements</label>
             </div>
 
             <!--Number of parking-->
-            <div  class="numbers hybr">
-                <input type="text" id="parking3Num">
-                <label>Number of Parking</label>
+            <div  class="numbers hybr redcol">
+                <input class="enter_Text" type="number" id="parking3Num" placeholder="Number of Parking">
+                <label class="enter_Text_Label">Parking</label>
             </div>
 
                  <!--Number of distinct business-->
-            <div  class="numbers hybr">
-                <input type="text" id="business3Num">
-                <label>Number of distinct businesses</label>
+            <div  class="numbers hybr bluecol">
+                <input class="enter_Text" type="number" id="business3Num" placeholder="Distinct Businesses">
+                <label class="enter_Text_Label">Distinct businesses</label>
             </div>
 
                         <!--Number of floors-->
-            <div class="numbers hybr">
-                <input type="text" id="floors3Num">
-                <label>Number of floors</label>
+            <div class="numbers hybr redcol">
+                <input class="enter_Text" type="number" id="floors3Num" placeholder="Number of Floors">
+                <label class="enter_Text_Label">Floors</label>
             </div>
             <!--Maximum occupant per floor-->
-            <div  class="numbers hybr">
-                <input type="text" id="maxPerFloor3">
-                <label>Maximum number of occupants per floor</label>
+            <div  class="numbers hybr bluecol">
+                <input class="enter_Text" type="number" id="maxPerFloor3" placeholder="Maximum per Floor">
+                <label class="enter_Text_Label">Occupants per floor</label>
             </div>
+        </div>
 
             <!--Hours of activities-->
-           <div  class="numbers hybr">
-                <input type="text" id="hourofactivities3">
-                <label>Number of hours of activity</label>
+           <div  class="numbers hybr redcol center">
+                <input class="enter_Text" type="number" id="hourofactivities3" placeholder="Hours of activities">
+                <label class="enter_Text_Label">Hours of activity</label>
             </div>
+
+           
+                
             
         </div>
 
+        <div class="hybr row center">
 
+            <div class="container numbers hybr bluecol">
+                <label>Elevator type</label>
+            <div class="hybr">
+                <input name="grp3" id="hybr-elevatortype1" type="radio" value="7565">Standard</button>
+            </div>
+            <div class="hybr">
+                <input name="grp3" id="hybr-elevatortype2"type="radio" value="12345">Premium</button>
+            </div>
+            <div class="hybr">
+                <input name="grp3" id="hybr-elevatortype3" type="radio" value="15400">Excelium</button>
+            </div>
+            </div>
 
-   
-    
-        <div id="result">
-            <label >Hey</label>
+            <div class="container numbers hybr redcol">
+                <label>Instalation</label>
+                <div class="hybr">
+                    <input id="hybr-installation1" name="grp4" type="radio" value="(10/100)">Standard</button>
+                </div>
+                <div class="hybr">
+                    <input id="hybr-installation2" name="grp4" type="radio" value="(13/100)">Premium</button>
+                </div>
+                <div class="hybr">
+                    <input id="hybr-installation3" name="grp4" type="radio" value="(16/100)">Excelium</button>
+                </div>
+                </div>
+
+                </div>
+
+        
+        <div class="AnswersToLoad hybr numbers center row">
+            <table>
+                <table>
+                    <p>Cost</p>
+                    <p id="hybr-price1"> </p>
+                </table>
+                
+                <table>
+                    <p>Elevators</p>
+                    <p id="hybr-totalelevator1"> </p>
+                </table>
+                <table>
+                    <p
+                <p id="hybr-totalfloor1">Floor</p>
+                </table>
+            </table>
         </div>
 
+    
+   
+    
+      
  
     </div>
 
+    
+
     <!--Calculate-->
-    <button class="calculate">Get quote</button>
     <!--wrapper-->
     <di id="wrapper">
 
 
-
-        <!-- Parallax -->
-        <section class="parallax parallax-1" ;">
-            <div class="overlay dark-5">
-                <!-- dark overlay [1 to 9 opacity] -->
-            </div>
-
-            <div class="container">
-
-                <div class="text-center">
-                    <h2 class="fs-40 fw-300">Thank you!</h2>
-                    <a class="btn btn-default btn-lg" href="#">GET A QUOTE <i class="fa fa-angle-right"></i></a>
-                    &nbsp; OR &nbsp;
-                    <a class="btn btn-warning btn-lg" href="index-onepage-construction.html">Main Page <i
-                            class="fa fa-angle-right"></i></a>
-                </div>
-
-            </div>
-        </section>
-        <!-- /Parallax -->
 
     </di>
     
