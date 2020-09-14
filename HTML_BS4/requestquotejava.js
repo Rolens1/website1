@@ -30,7 +30,7 @@ $(function name (calculations){
             round_totalshaft = totalStories_resi * nombrePorteAscenseur
            
             
-           
+            $('#resi-totalelevator1').text(round_totalshaft)
             
         
         var resi1 = document.getElementById("resi-elevatortype1")
@@ -52,13 +52,13 @@ $(function name (calculations){
 
 
         if (resi1.checked === true && resi4.checked === true) {  
-            $('#resi-price1').text(resi2_pricing1)
+            $('#resi-price1').text(resi2_pricing1+ " $")
         }
         if (resi1.checked === true && resi5.checked === true) {  
-            $('#resi-price1').text(resi2_pricing2)   
+            $('#resi-price1').text(resi2_pricing2+ " $")   
         }
         if (resi1.checked === true && resi6.checked === true) {  
-            $('#resi-price1').text(resi2_pricing3)
+            $('#resi-price1').text(resi2_pricing3+ " $")
 
         }
         
@@ -127,6 +127,7 @@ $(function name (calculations){
 
         var totalElevatorB
         totalElevatorB = totalcolumn1 * totalPerColumn1
+        $('#corp-totalelevator1').text(totalElevatorB)
 
 
 
@@ -200,6 +201,8 @@ $(function name (calculations){
 
 
         var commShaft = elevators1
+        $('#comm-totalelevator1').text(elevators1)
+
 
         commShaft = elevators1 * comm1.value
         var commShaft1 = commShaft + (commShaft * 0.10)
@@ -211,13 +214,16 @@ $(function name (calculations){
 
 
         if (comm1.checked === true && comm4.checked === true) {
-           alert(commShaft1)
+           $('#comm-price1').text(commShaft1)
+
         }
         if (comm1.checked === true && comm5.checked === true) {
-            alert(commShaft2)
+           $('#comm-price1').text(commShaft2)
+
         }
         if (comm1.checked === true && comm6.checked === true) {
-            alert(commShaft3)
+           $('#comm-price1').text(commShaft3)
+
         }
 
 
@@ -228,13 +234,16 @@ $(function name (calculations){
 
 
         if (comm2.checked === true && comm4.checked === true) {
-            alert(commShaft11)
+           $('#comm-price1').text(commShaft11)
+
          }
          if (comm2.checked === true && comm5.checked === true) {
-             alert(commShaft22)
+           $('#comm-price1').text(commShaft22)
+
          }
          if (comm2.checked === true && comm6.checked === true) {
-             alert(commShaft33)
+           $('#comm-price1').text(commShaft33)
+
          }
 
 
@@ -246,12 +255,18 @@ $(function name (calculations){
  
          if (comm3.checked === true && comm4.checked === true) {
              alert(commShaft111)
+           $('#comm-price1').text(commShaft11)
+
           }
           if (comm3.checked === true && comm5.checked === true) {
               alert(commShaft222)
+           $('#comm-price1').text(commShaft22)
+
           }
           if (comm3.checked === true && comm6.checked === true) {
               alert(commShaft333)
+           $('#comm-price1').text(commShaft33)
+
           }
 
         
@@ -279,6 +294,7 @@ $(function name (calculations){
 
         var totalElevatorA
         totalElevatorA = totalcolumn * totalPerColumn
+        $('#hybr-totalelevator1').text(totalElevatorA)
           
 
 
